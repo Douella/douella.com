@@ -42,6 +42,7 @@ const CONTACT = {
 
 ```text
 index.html                  עמוד הבית
+accessibility.html          הצהרת נגישות
 styles.css                  מערכת העיצוב והרספונסיביות
 site.js                     פרטי קשר, תפריט מובייל, אנימציות
 assets/hero-art.svg         איור הירו מקורי (חלופי)
