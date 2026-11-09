@@ -212,6 +212,82 @@ function initTestimonialLightbox() {
   });
 }
 
+function initAboutGallery() {
+  const gallery = document.querySelector("[data-about-gallery]");
+  if (!gallery) return;
+
+  const sync = () => {
+    const canScroll = gallery.scrollWidth > gallery.clientWidth + 1;
+    gallery.tabIndex = canScroll ? 0 : -1;
+    gallery.setAttribute(
+      "aria-label",
+      canScroll
+        ? "תמונות אישיות של אלה. ניתן לגלול עם מקשי החצים."
+        : "תמונות אישיות של אלה"
+    );
+  };
+
+  gallery.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    if (gallery.scrollWidth <= gallery.clientWidth + 1) return;
+
+    const step = Math.min(gallery.clientWidth * 0.8, 340);
+    const delta = event.key === "ArrowLeft" ? -step : step;
+    gallery.scrollBy({ left: delta, behavior: "smooth" });
+    event.preventDefault();
+  });
+
+  window.addEventListener("resize", sync);
+  sync();
+}
+
+function initTestimonialControls() {
+  const track = document.querySelector(".testimonial-track");
+  const prev = document.querySelector("[data-testimonial-prev]");
+  const next = document.querySelector("[data-testimonial-next]");
+  const count = document.querySelector("[data-testimonial-count]");
+  if (!track || !prev || !next || !count) return;
+
+  const cards = Array.from(track.querySelectorAll(".testimonial-card"));
+  if (!cards.length) return;
+
+  const isRTL = getComputedStyle(track).direction === "rtl";
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const getStep = () => {
+    const card = cards[0];
+    if (!card) return 0;
+    return card.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
+  };
+
+  const update = () => {
+    const step = getStep();
+    const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+    const position = Math.max(0, Math.min(maxScroll, Math.abs(track.scrollLeft)));
+    const index = step > 0 ? Math.min(cards.length - 1, Math.round(position / step)) : 0;
+
+    count.textContent = `${index + 1} מתוך ${cards.length}`;
+    prev.disabled = index <= 0;
+    next.disabled = index >= cards.length - 1;
+  };
+
+  const scrollByStep = (direction) => {
+    const step = getStep();
+    if (!step) return;
+    const rtlDirection = isRTL ? -1 : 1;
+    track.scrollBy({
+      left: direction * step * rtlDirection,
+      behavior: reducedMotion ? "auto" : "smooth"
+    });
+  };
+
+  prev.addEventListener("click", () => scrollByStep(-1));
+  next.addEventListener("click", () => scrollByStep(1));
+  track.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+  window.addEventListener("resize", () => requestAnimationFrame(update));
+  update();
+}
+
 function initYear() {
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
@@ -221,6 +297,8 @@ applyContactDetails();
 initHeader();
 initMobileMenu();
 initTestimonialLightbox();
+initAboutGallery();
+initTestimonialControls();
 initReveal();
 initActiveNav();
 initYear();

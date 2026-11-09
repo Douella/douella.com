@@ -87,8 +87,7 @@
         </a>
         <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">פתיחת תפריט</span>
-          <span></span>
-          <span></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
@@ -227,7 +226,7 @@
       </div>
 
       <div class="container about-gallery">
-        <div class="about-gallery-grid" data-reveal>
+        <div class="about-gallery-grid" data-reveal data-about-gallery role="region" aria-label="תמונות אישיות של אלה" tabindex="0">
           <figure class="about-photo-card">
             <img src="assets/photos/ella-gallery-1.jpg" alt="תמונה אישית של אלה גנץ" width="1200" height="1800" loading="lazy">
           </figure>
@@ -317,7 +316,7 @@
               <span class="service-number" aria-hidden="true">03</span>
             </div>
             <h4>קורס היפנובירתינג פרטי</h4>
-            <p>קורס אישי בגישת "פשוט ללדת": חמישה מפגשים שבהם תקבלו את הכלים לקראת הלידה: נשימות, הרפיה, עיסוי והכנת בן הזוג.</p>
+            <p>קורס אישי בגישת "<a class="course-link" href="https://www.hypnobirthing.co.il/whathypno/" target="_blank" rel="noopener noreferrer">פשוט ללדת</a>": חמישה מפגשים שבהם תקבלו את הכלים לקראת הלידה: נשימות, הרפיה, עיסוי והכנת בן הזוג.</p>
             <ul class="service-list">
               <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>5 מפגשים אישיים</li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2.5–3 שעות לכל מפגש</li>
@@ -336,7 +335,7 @@
               <span class="service-number" aria-hidden="true">04</span>
             </div>
             <h4>קורס היפנובירתינג קבוצתי</h4>
-            <p>אותם כלים בגישת "פשוט ללדת", בקבוצה קטנה ואינטימית של 3–8 זוגות. חמישה מפגשים עם מקום לשאלות, תרגול והכנה משותפת.</p>
+            <p>אותם כלים בגישת "<a class="course-link" href="https://www.hypnobirthing.co.il/whathypno/" target="_blank" rel="noopener noreferrer">פשוט ללדת</a>", בקבוצה קטנה ואינטימית של 3–8 זוגות. חמישה מפגשים עם מקום לשאלות, תרגול והכנה משותפת.</p>
             <ul class="service-list">
               <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>5 מפגשים בקבוצה קטנה</li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2.5–3 שעות לכל מפגש</li>
@@ -463,6 +462,16 @@
             </button>
           </li>
         </ul>
+
+        <div class="testimonial-controls" role="group" aria-label="ניווט בהמלצות">
+          <button class="testimonial-control" type="button" data-testimonial-prev aria-label="ההמלצה הקודמת">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <span class="testimonial-count" data-testimonial-count aria-live="polite">1 מתוך 5</span>
+          <button class="testimonial-control" type="button" data-testimonial-next aria-label="ההמלצה הבאה">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+        </div>
 
         <p class="testimonials-note">ההמלצות מובאות באישור הלקוחות. לצפייה במקור, לחצו על הקישור בכל כרטיס.</p>
       </div>
