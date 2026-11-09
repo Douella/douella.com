@@ -1187,6 +1187,12 @@ h3 {
   block-size: 26px;
 }
 
+.course-seal {
+  inline-size: 54px;
+  block-size: auto;
+  flex: none;
+}
+
 .service-number {
   color: var(--gold);
   font-family: var(--font-display);

@@ -49,6 +49,7 @@ assets/about-art.svg        איור אודות מקורי (חלופי)
 assets/favicon.svg          אייקון האתר
 assets/testimonials/        צילומי ההמלצות המקוריות
 assets/photos/              תמונת ההירו, הדיוקן והגלריה
+assets/goldseal-hebrew.png  חותם ההיפנובירתינג
 ```
 
 ## עיצוב
