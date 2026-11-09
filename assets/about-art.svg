@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="aboutArtTitle aboutArtDesc">
+  <title id="aboutArtTitle">איור דיוקן של דולה</title>
+  <desc id="aboutArtDesc">איור דיוקן עדין של אישה עם שיער אסוף, על רקע קשת ירוקה ועלים.</desc>
+  <defs>
+    <linearGradient id="sageGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89977f"/>
+      <stop offset="1" stop-color="#5b6a53"/>
+    </linearGradient>
+    <clipPath id="aboutArchClip">
+      <path d="M60 570V252C60 142 140 68 250 68s190 74 190 184v318z"/>
+    </clipPath>
+    <g id="aboutLeaf">
+      <path d="M0 0C-22-5-34-23-32-44-12-38 2-21 0 0z" fill="#dfe5d8" opacity=".75"/>
+    </g>
+    <g id="aboutSparkle">
+      <path d="M0-8c1 4 3 6 8 8-5 2-7 4-8 8-1-4-3-6-8-8 5-2 7-4 8-8z" fill="#e8dcc4"/>
+    </g>
+  </defs>
+
+  <ellipse cx="250" cy="582" rx="165" ry="16" fill="#2f2a25" opacity=".1"/>
+  <path d="M60 570V252C60 142 140 68 250 68s190 74 190 184v318z" fill="url(#sageGrad)"/>
+  <path d="M60 570V252C60 142 140 68 250 68s190 74 190 184v318z" fill="none" stroke="#dfe5d8" stroke-width="1.5" opacity=".5"/>
+
+  <g clip-path="url(#aboutArchClip)">
+    <circle cx="250" cy="286" r="142" fill="#f3ece1" opacity=".12"/>
+    <circle cx="250" cy="286" r="142" fill="none" stroke="#f3ece1" stroke-width="1" stroke-dasharray="2 9" opacity=".25"/>
+    <path d="M30 566c60-38 124-42 198-12s152 30 232-12v88H30z" fill="#3f4d3a" opacity=".26"/>
+  </g>
+
+  <g fill="#2f2a25">
+    <circle cx="250" cy="240" r="61"/>
+    <circle cx="302" cy="188" r="28"/>
+    <path d="M288 180c22 16 30 42 24 70-4-24-15-42-33-52z"/>
+    <path d="M214 292c-24 14-38 40-44 76l-20 202h200l-20-202c-6-36-20-62-44-76z"/>
+  </g>
+
+  <path d="M216 214c-15 15-18 39-9 57 4 9 12 16 22 19" fill="none" stroke="#f3ece1" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+  <circle cx="210" cy="286" r="5" fill="#c4a06a"/>
+  <path d="M211 306c22 24 56 24 78 0" fill="none" stroke="#f3ece1" stroke-width="4" stroke-linecap="round" opacity=".18"/>
+
+  <path d="M250 386c-13-13-24-24-24-36 0-10 8-17 17-17 5 0 9 3 11 7 2-4 6-7 11-7 9 0 17 7 17 17 0 12-11 23-24 36l-4 4z" fill="#e8dcc4" opacity=".9"/>
+
+  <g opacity=".85">
+    <path d="M96 520c-7-42-9-84 4-124 7-22 18-42 31-58" fill="none" stroke="#dfe5d8" stroke-width="2" stroke-linecap="round"/>
+    <use href="#aboutLeaf" transform="translate(98 478) rotate(20)"/>
+    <use href="#aboutLeaf" transform="translate(95 442) rotate(-26) scale(.9)"/>
+    <use href="#aboutLeaf" transform="translate(101 404) rotate(24) scale(.8)"/>
+    <use href="#aboutLeaf" transform="translate(112 368) rotate(-20) scale(.7)"/>
+  </g>
+  <g opacity=".85">
+    <path d="M424 524c9-46 11-92-4-134-8-24-20-44-35-60" fill="none" stroke="#dfe5d8" stroke-width="2" stroke-linecap="round"/>
+    <use href="#aboutLeaf" transform="translate(422 482) rotate(-20) scale(-1 1)"/>
+    <use href="#aboutLeaf" transform="translate(424 446) rotate(26) scale(-.9 .9)"/>
+    <use href="#aboutLeaf" transform="translate(418 408) rotate(-24) scale(-.8 .8)"/>
+    <use href="#aboutLeaf" transform="translate(408 372) rotate(20) scale(-.7 .7)"/>
+  </g>
+
+  <g opacity=".85">
+    <use href="#aboutSparkle" transform="translate(132 176) scale(1)"/>
+    <use href="#aboutSparkle" transform="translate(396 224) scale(.7)"/>
+    <use href="#aboutSparkle" transform="translate(388 472) scale(.55)"/>
+    <use href="#aboutSparkle" transform="translate(112 320) scale(.5)"/>
+  </g>
+</svg>
