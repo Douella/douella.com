@@ -5,7 +5,7 @@ const CONTACT = {
   instagram: "https://www.instagram.com/ella_gantz_doula",
   instagramHandle: "@ella_gantz_doula",
   facebook: "https://www.facebook.com/ella.gantz/",
-  facebookLabel: "אלה גנץ · דולה והכנה ללידה"
+  facebookLabel: "אלה גנץ · דולה ומדריכת הכנה ללידה"
 };
 
 const DEFAULT_WA_MESSAGE = "היי אלה, אשמח לשמוע עוד על הליווי";
